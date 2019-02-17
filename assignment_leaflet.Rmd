@@ -1,0 +1,22 @@
+---
+title: "Coursera Leaflet example"
+author: "WickyDonkey"
+date: "17 februari 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Show Amsterdam Central Station
+
+This document is part of the Coursera course. It's purpose is to show a Leaflet example.
+
+```{r leaflet, echo=FALSE}
+library(leaflet, verbose=FALSE, warn.conflicts = FALSE, quietly=TRUE)
+my_map <- leaflet() %>% addTiles() %>% 
+    addMarkers(lat=52.379189, lng=4.899431, popup = "Amsterdam Central Station")
+my_map
+```
+
